@@ -2,36 +2,39 @@
 
 
     <!-- .................................................... -->
-    <main>
+    <main class="single-news">
     <div class="container">
           <div class="row">
-            <div class="col">
-              <div class="card">
-                <?php  
+            <div class="col-12">
+              
+              <?php  
                   while( have_posts() ): the_post();
-                ?>
-                <div class="card-img">
-                  <?php the_post_thumbnail(); ?>
+                  ?>
+              <div class="card-post">
+                <div class="head-title">
+                  <div class="dark"></div>
+                  <h2 class="card-title"><?php the_title(); ?></h2>
+                  <p><?php echo get_the_date(); ?></p>
                 </div>
-
-                <div class="card-body">
-                  <h4 class="card-title"><?php the_title(); ?></h4>
-                  <p class="card-text">
-                    <?php the_content(); ?>
-                  </p>
+              
+                <div class="card mb-3">
+                    <?php the_post_thumbnail(); ?>
+                  <div class="card-body">
+                    
+                    <p class="card-text">
+                          <?php the_content(); ?>
+                    </p>
+                    
+                  </div>
                 </div>
 
                 <?php
                 endwhile;
                 ?>
               </div>
-            </div>
-            
-            
-          </div>
-
-          
-        </div>
+            </div>                        
+          </div>                 
+      </div>
 
         <section class="main-latestnews">
         <div class="head-title">

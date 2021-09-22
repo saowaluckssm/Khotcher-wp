@@ -1,9 +1,9 @@
-<div class="col">
+<div class="col-12 col-md-6 col-lg-4">
      <div class="card h-100">
       <div class="card-img">
-      <a href="<?php the_permalink(); ?>">
-      <?php the_post_thumbnail(); ?>
-      </a>
+          <a href="<?php the_permalink(); ?>">
+          <?php the_post_thumbnail(); ?>
+          </a>
       </div>
 
       <div class="card-body">
@@ -13,11 +13,11 @@
         <p class="card-text">
           <?php the_excerpt(); ?>
         </p>
-        <a href="<?php the_permalink(); ?>">
-            <p>
-            Read More -->
-            </p>
-        </a>
+          <a href="<?php the_permalink(); ?>">
+              <small class="read-more">
+              Read More →
+              </small>
+          </a>
       </div>
     </div>
 </div>

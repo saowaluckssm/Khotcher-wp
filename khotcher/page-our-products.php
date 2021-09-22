@@ -1,7 +1,11 @@
 <?php get_header(); ?>
+<div class="hero">
     <?php
     echo do_shortcode('[smartslider3 slider="5"]');
     ?>
+
+</div>
+
 
 
     <!-- .................................................... -->
@@ -15,20 +19,37 @@
           </ul>
         </div>
         <div class="container">
-          <div class="row row-cols-1 row-cols-md-3">
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
             <?php
+
+                $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+
                 $args = array(
                     'post_type' => 'post',
                     "category_name" => "Products",
+                    'paged' => $paged
                 );
 
-                $post_query = new WP_Query($args);
+                $wp_query = new WP_Query($args);
 
-                if($post_query->have_posts() ):
-                    while($post_query->have_posts() ): 
-                        $post_query->the_post();
+                if($wp_query->have_posts() ):
+                    while($wp_query->have_posts() ): 
+                        $wp_query->the_post();
                 get_template_part( "template-parts/products" );
             endwhile;
+
+            ?>
+
+                <div class="col-6 page-button">  
+                  <?php the_posts_pagination(
+                    array(
+                      "prev_text" => "Previous",
+                      "next_text" => "Next"
+                    )
+                  ); ?>             
+                </div>
+            
+            <?php 
             wp_reset_postdata();
             else:       
             ?>

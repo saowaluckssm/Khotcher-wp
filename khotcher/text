@@ -59,3 +59,111 @@
             ?>
             <p>There's nothing yet to be displayed</p>
             <?php endif; ?>
+
+
+
+            //////////////////
+            <?php 
+             the_posts_pagination(
+               array(
+                 "prev_text" => "Previous",
+                 "next_text" => "Next"
+               )
+             )
+             ?>
+
+
+<?php previous_posts_link("<< Newer"); ?>
+             <?php next_posts_link("Older >>"); ?>
+
+
+
+             <!-- /*
+Template Name: Product Template 
+Template Post Type: post, product
+*/
+
+
+
+<main class="single-product">
+    <section class="single-product-left">
+    <div class="row">
+        <div class="col-md-6 col-12 content">
+        <?php  
+                while( have_posts() ): the_post();
+                ?>
+        <h1><?php the_title(); ?></h1>
+        <p class="card-text">
+            <?php the_content(); ?>
+        </p>
+        
+        
+        
+        <div class="end-line dark"></div>
+
+        <div>
+            <button class="btn btn-dark">
+            <a href="#">Explore More</a>
+            </button>
+        </div>
+        </div>
+        <div class="col-md-6 col-12">
+        <?php the_post_thumbnail(); ?>
+        </div>
+    </div>
+    </section>
+
+    <section class="single-product-right">
+    <div class="row">
+        <div class="col-md-6 col-12">
+        <img
+            src="https://images.unsplash.com/photo-1517466832364-a428140f1b7d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjZ8fGNvZmZlZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
+            alt=""
+        />
+        </div>
+        <div class="col-md-6 col-12 content">
+        <h1>Product Name</h1>
+
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Aspernatur est architecto enim ratione nulla, quibusdam eum
+            aperiam nam ducimus veniam omnis nihil quo quod officiis assumenda
+            ea iure qui doloremque impedit amet quaerat. Iusto quaerat
+            sapiente enim quasi, dolores dolorem, perspiciatis deleniti animi
+            accusamus quae dolore debitis est mollitia. Modi.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Aspernatur est architecto enim ratione nulla, quibusdam eum
+            aperiam nam ducimus veniam omnis nihil quo quod officiis assumenda
+            ea iure qui doloremque impedit amet quaerat. Iusto quaerat
+            sapiente enim quasi, dolores dolorem, perspiciatis deleniti animi
+            accusamus quae dolore debitis est mollitia. Modi.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Aspernatur est architecto enim ratione nulla, quibusdam eum
+            aperiam nam ducimus veniam omnis nihil quo quod officiis assumenda
+            ea iure qui doloremque impedit amet quaerat. Iusto quaerat
+            sapiente enim quasi, dolores dolorem, perspiciatis deleniti animi
+            accusamus quae dolore debitis est mollitia. Modi.
+        </p>
+        <div class="end-line dark"></div>
+
+        <div>
+            <button class="btn btn-dark">
+            <a href="#">Explore More</a>
+            </button>
+        </div>
+        </div>
+    </div>
+    </section>
+
+    <section>
+        <div class="head-title">
+            <div class="dark"></div>
+            <h2>Available at</h2>
+        </div>
+        <div class="thumbnail"></div>
+    </section>
+</main>

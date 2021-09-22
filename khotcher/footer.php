@@ -1,6 +1,6 @@
 <footer>
       <div class="row">
-        <div class="col-4">
+        <div class="col-12 col-lg-4 pd-1">
           <h1>Contact us</h1>
           <p>
             99/859 Moo 2, Na Mai Sub-districy,
@@ -13,16 +13,16 @@
           </p>
           <p>Tel:(66)2-023-7989</p>
           <p>Mobile: (66)65-191-4654</p>
-          <p>Email: weerachoke_timmy@knotccherglobalfood.om</p>
+          <p>Email: weerachoke_timmy@knotccherglobalfood.com</p>
         </div>
-        <div class="col-4 footer-menu">
+        <div class="col-12 col-lg-4 pd-1 footer-menu">
             <?php wp_nav_menu( array( 
               'theme_location' => 'footer_menu',
               
 
               )); ?> 
         </div>
-        <div class="col-4 footer-social">
+        <div class="col-12 col-lg-4 pd-1 footer-social">
           <div class="footer-logo">
             <?php the_custom_logo(); ?>
           </div>

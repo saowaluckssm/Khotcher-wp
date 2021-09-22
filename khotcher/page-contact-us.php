@@ -1,8 +1,10 @@
 <?php get_header(); ?>
+    <div class="hero">
+        <?php
+        echo do_shortcode('[smartslider3 slider="7"]');
+        ?>
 
-    <?php
-    echo do_shortcode('[smartslider3 slider="7"]');
-    ?>
+    </div>
 
     <!-- .................................................... -->
     <main class="contact">
@@ -14,59 +16,34 @@
 
         <div class="contact-container">
           <div class="row">
-            <div class="col-md-5 col-12 content">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Aspernatur est architecto enim ratione nulla, quibusdam eum
-                aperiam nam ducimus veniam omnis nihil quo quod officiis
-                assumenda ea iure qui doloremque impedit amet quaerat. Iusto
-                quaerat sapiente enim quasi, dolores dolorem, perspiciatis
-                deleniti animi accusamus quae dolore debitis est mollitia. Modi.
-              </p>
-              <div class="contact">
-                <h4>Contact</h4>
-                <p>address</p>
-
-                <p>
-                  99/859 Moo 2, Na Mai Sub-districy,
-                  <br />
-                  Lad Lhum Kaeo District,
-                  <br />
-                  Pathum Thani Provine,
-                  <br />
-                  Thailand 12140
-                </p>
-                <p>Tel:(66)2-023-7989</p>
-                <p>Mobile: (66)65-191-4654</p>
-                <p>Email: weerachoke_timmy@knotccherglobalfood.om</p>
-              </div>
+            <div class="col-lg-5 col-12 content">
+             <!-- Head-quarter snippet -->
+            <?php dynamic_sidebar('smartslider_area_2'); ?>
             </div>
-            <div class="col-md-7 col-12">
-              <div class="row">
-                <div class="col-4">
-                  <div class="card card-img">
-                    <img
-                      src="https://images.unsplash.com/photo-1630370426803-fa2b6cef3145?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div class="col-4">
-                  <div class="card card-img">
-                    <img
-                      src="https://images.unsplash.com/photo-1630370426803-fa2b6cef3145?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div class="col-4">
-                  <div class="card card-img">
-                    <img
-                      src="https://images.unsplash.com/photo-1630370426803-fa2b6cef3145?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
-                      alt=""
-                    />
-                  </div>
-                </div>
+            <div class="col-lg-7 col-12">
+              <div class="row row-cols-1 row-cols-md-3">
+                 <!-- Head quarter img gallery -->
+               
+                 <?php 
+                    $args = array(
+                      "post_type" => "post",
+                      "posts_per_page" => 3,
+                      "category_name" => "head-quarter-img",
+                    );
+
+                    $new_featured = new WP_Query( $args );                  
+                      while( $new_featured->have_posts() ):
+                        $new_featured->the_post();
+                  ?>
+                    <div class="col">
+                        <div class="card card-img">
+                          <?php the_post_thumbnail(); ?>
+                        </div>
+                    </div>
+                  <?php
+                        endwhile;
+                        wp_reset_postdata();
+                  ?>           
               </div>
 
               <div class="card card-map">
@@ -86,32 +63,31 @@
 
         <div class="contact-container">
           <div class="row">
-            <div class="col-md-7 col-12">
-              <div class="row">
-                <div class="col-4">
-                  <div class="card card-img">
-                    <img
-                      src="https://images.unsplash.com/photo-1630370426803-fa2b6cef3145?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div class="col-4">
-                  <div class="card card-img">
-                    <img
-                      src="https://images.unsplash.com/photo-1630370426803-fa2b6cef3145?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div class="col-4">
-                  <div class="card card-img">
-                    <img
-                      src="https://images.unsplash.com/photo-1630370426803-fa2b6cef3145?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
-                      alt=""
-                    />
-                  </div>
-                </div>
+            <div class="col-lg-7 col-12">
+              <div class="row row-cols-1 row-cols-md-3">
+                 <!-- Factory img gallery -->
+               
+                 <?php 
+                    $args = array(
+                      "post_type" => "post",
+                      "posts_per_page" => 3,
+                      "category_name" => "Factory-img",
+                    );
+
+                    $new_featured = new WP_Query( $args );                  
+                      while( $new_featured->have_posts() ):
+                        $new_featured->the_post();
+                  ?>
+                    <div class="col">
+                        <div class="card card-img">
+                          <?php the_post_thumbnail(); ?>
+                        </div>
+                    </div>
+                  <?php
+                        endwhile;
+                        wp_reset_postdata();
+                  ?>  
+                
               </div>
               <div class="card">
                 <!-- Google map -->
@@ -119,32 +95,9 @@
                 </iframe>
               </div>
             </div>
-            <div class="col-md-5 col-12 content">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Aspernatur est architecto enim ratione nulla, quibusdam eum
-                aperiam nam ducimus veniam omnis nihil quo quod officiis
-                assumenda ea iure qui doloremque impedit amet quaerat. Iusto
-                quaerat sapiente enim quasi, dolores dolorem, perspiciatis
-                deleniti animi accusamus quae dolore debitis est mollitia. Modi.
-              </p>
-              <div class="contact">
-                <h4>Contact</h4>
-                <p>address</p>
-
-                <p>
-                  99/859 Moo 2, Na Mai Sub-districy,
-                  <br />
-                  Lad Lhum Kaeo District,
-                  <br />
-                  Pathum Thani Provine,
-                  <br />
-                  Thailand 12140
-                </p>
-                <p>Tel:(66)2-023-7989</p>
-                <p>Mobile: (66)65-191-4654</p>
-                <p>Email: weerachoke_timmy@knotccherglobalfood.om</p>
-              </div>
+            <div class="col-lg-5 col-12 content">
+            <?php dynamic_sidebar('smartslider_area_3'); ?>
+            
             </div>
           </div>
         </div>
@@ -157,59 +110,37 @@
 
         <div class="contact-container">
           <div class="row">
-            <div class="col-md-5 col-12 content">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Aspernatur est architecto enim ratione nulla, quibusdam eum
-                aperiam nam ducimus veniam omnis nihil quo quod officiis
-                assumenda ea iure qui doloremque impedit amet quaerat. Iusto
-                quaerat sapiente enim quasi, dolores dolorem, perspiciatis
-                deleniti animi accusamus quae dolore debitis est mollitia. Modi.
-              </p>
-              <div class="contact">
-                <h4>Contact</h4>
-                <p>address</p>
+            <div class="col-lg-5 col-12 content">
 
-                <p>
-                  99/859 Moo 2, Na Mai Sub-districy,
-                  <br />
-                  Lad Lhum Kaeo District,
-                  <br />
-                  Pathum Thani Provine,
-                  <br />
-                  Thailand 12140
-                </p>
-                <p>Tel:(66)2-023-7989</p>
-                <p>Mobile: (66)65-191-4654</p>
-                <p>Email: weerachoke_timmy@knotccherglobalfood.om</p>
-              </div>
+            <!-- Khotcher cafe snippet -->
+              <?php dynamic_sidebar('smartslider_area_1'); ?>
             </div>
-            <div class="col-md-7 col-12">
-              <div class="row">
-                <div class="col-4">
-                  <div class="card card-img">
-                    <img
-                      src="https://images.unsplash.com/photo-1630370426803-fa2b6cef3145?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
-                      alt=""
-                    />
+            <div class="col-lg-7 col-12">
+              <div class="row row-cols-1 row-cols-md-3">
+
+              <!-- Cafe img gallery -->
+               
+                <?php 
+                    $args = array(
+                      "post_type" => "post",
+                      "posts_per_page" => 3,
+                      "category_name" => "Cafe-img",
+                    );
+
+                    $new_featured = new WP_Query( $args );                  
+                      while( $new_featured->have_posts() ):
+                        $new_featured->the_post();
+                ?>
+                 <div class="col">
+                    <div class="card card-img">
+                      <?php the_post_thumbnail(); ?>
+                    </div>
                   </div>
-                </div>
-                <div class="col-4">
-                  <div class="card card-img">
-                    <img
-                      src="https://images.unsplash.com/photo-1630370426803-fa2b6cef3145?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div class="col-4">
-                  <div class="card card-img">
-                    <img
-                      src="https://images.unsplash.com/photo-1630370426803-fa2b6cef3145?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
-                      alt=""
-                    />
-                  </div>
-                </div>
+                <?php
+                      endwhile;
+                      wp_reset_postdata();
+                    ?>
+                
               </div>
               <div class="card">
                 <!-- Google map -->

@@ -1,8 +1,12 @@
 <?php get_header(); ?>
+    <div class="hero">
+        <?php
+        echo do_shortcode('[smartslider3 slider="6"]');
+        ?>
 
-    <?php
-    echo do_shortcode('[smartslider3 slider="6"]');
-    ?>
+    </div>
+
+
 
     <!-- .................................................... -->
     <main>
@@ -22,11 +26,15 @@
 
 
         <div class="container">
-          <div class="row row-cols-1 row-cols-md-3">
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+            
             <?php
+                $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+
                 $args = array(
                     'post_type' => 'post',
                     "category_name" => "News",
+                    'paged' => $paged
                 );
 
                 $wp_query = new WP_Query($args);
@@ -35,29 +43,23 @@
                     while($wp_query->have_posts() ): 
                         $wp_query->the_post();
                 get_template_part( "template-parts/news" );
-            endwhile;
+               
+              endwhile;
+             
+              ?>
+
+            <div class="col page-button">  
+              <?php posts_nav_link(); ?>             
+            </div>
+            
+              <?php 
+             wp_reset_postdata();
+            else:       
             ?>
-             <div class="page-button">
-             <!-- <?php posts_nav_link(); ?> -->
-             <!-- <?php posts_nav_link( ' · ', 'previous page', 'next page' ); ?> -->
-             <?php previous_posts_link("<< Newer"); ?>
-             <?php next_posts_link("Older >>"); ?>
-                
-             </div>
-                <?php 
-                else:       
-                ?>
-                <p>There's nothing yet to be displayed</p>
-                <?php endif; ?>
+            <p>There's nothing yet to be displayed</p>
+            <?php endif; ?>
           </div>
-<!-- 
-          <div class="page-button">
-            <p><a href="#">Previous</a></p>
-            <p><a href="#">1</a></p>
-            <p><a href="#">2</a></p>
-            <p><a href="#">3</a></p>
-            <p><a href="#">Next</a></p>
-          </div> -->
+
         </div>
       </div>
     </main>

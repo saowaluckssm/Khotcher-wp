@@ -1,0 +1,27 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 4171373, 2021-09-01T09:52:50-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: AlethiaPro-Regular by Mint Type
+ * URL: https://www.myfonts.com/fonts/konstantynov/alethia-pro/regular/
+ * Copyright: Copyright (c) 2016 by Oleh Lishchuk. All rights reserved.
+ * 
+ * 
+ * 
+ * © 2021 MyFonts Inc
+*/
+
+
+
+  
+@font-face {
+  font-family: "AlethiaPro-Regular";
+  src: url('webFonts/AlethiaProRegular/font.woff2') format('woff2'), url('webFonts/AlethiaProRegular/font.woff') format('woff');
+}
+

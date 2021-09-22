@@ -3,8 +3,9 @@
   
 
     <!-- .................................................... -->
+    <?php dynamic_sidebar('smartslider_area_6'); ?>
     <div class="container">
-    go to e-com site
+  
     </div>
     <!-- ////////////////////////////////////////////////////////////// -->
 <?php get_footer(); 

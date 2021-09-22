@@ -1,36 +1,21 @@
 <?php get_header(); ?>
+      <div class="hero">
+        <?php
+            echo do_shortcode('[smartslider3 slider="3"]');
+            ?>
 
-    <?php
-    echo do_shortcode('[smartslider3 slider="3"]');
-    ?>
+      </div> 
 
     <!-- .................................................... -->
     <main>
-
-    
       <!-- about -->
       <section class="main-about">
-        <div class="container main-about-container">
-          <h1>About</h1>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et ipsam
-            vero porro quisquam dignissimos esse perspiciatis molestiae delectus
-            eum at illum impedit, dolores sequi voluptatem consectetur quam
-            nulla reiciendis autem? Animi quisquam excepturi eaque at suscipit!
-            Corporis quae nobis iusto illum rem. Tempore, vero? Accusamus neque
-            vel labore nam enim.
-          </p>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et ipsam
-            vero porro quisquam dignissimos esse perspiciatis molestiae delectus
-            eum at illum impedit, dolores sequi voluptatem consectetur quam
-            nulla reiciendis autem? Animi quisquam excepturi eaque at suscipit!
-            Corporis quae nobis iusto illum rem. Tempore, vero? Accusamus neque
-            vel labore nam enim.
-          </p>
 
-          <button class="btn btn-clear"><a href="#">Explore More</a></button>
-        </div>
+
+          <?php
+          echo do_shortcode('[smartslider3 slider="15"]');
+          ?>
+
       </section>
       <!-- ---------------------------Product ------------------------------------>
 
@@ -43,13 +28,17 @@
           <div class="row">
             <div class="col-sm-6">
               <div class="product-left">
-                <h4 class="card-title">Raw Material</h4>
-                <div class="product-img">
-                  <img
-                    src="https://images.unsplash.com/photo-1622711321771-4a00d2bc0350?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&q=80"
-                    alt=""
-                  />
-                </div>
+               
+                <!-- <!-- <h4 class="card-title">Raw Material</h4> -->
+                <!-- <div class="product-img"> -->
+                <?php
+                if( is_active_sidebar("home-page-product-1")){
+                  dynamic_sidebar("home-page-product-1");
+                }
+
+                ?>
+                 
+                <!-- </div> -->
                 <button class="btn btn-dark">
                   <a href="#">Explore More</a>
                 </button>
@@ -57,15 +46,18 @@
             </div>
             <div class="col-sm-6">
               <div class="product-right">
-                <h4 class="card-title">Finished Food</h4>
-                <div class="product-img">
-                  <img
-                    src="https://images.unsplash.com/photo-1622711321771-4a00d2bc0350?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&q=80"
-                    alt=""
-                  />
-                </div>
+                <!-- <h4 class="card-title">Finished Food</h4> -->
+                <!-- <div class="product-img"> -->
+                <?php
+                if( is_active_sidebar("home-page-product-2")){
+                  dynamic_sidebar("home-page-product-2");
+                }
+
+                ?>
+                  
+                <!-- </div> -->
                 <button class="btn btn-dark">
-                  <a href="#">Explore More</a>
+                  <a href="">Explore More</a>
                 </button>
               </div>
             </div>
@@ -82,7 +74,7 @@
         </div>
 
         <div class="container">
-          <div class="row row-cols-1 row-cols-md-3">
+          <div class="row row-cols-1 row-cols-lg-3">
             <?php 
             $args = array(
               "post_type" => "post",
@@ -95,7 +87,33 @@
             if( $new_featured->have_posts() ):
               while( $new_featured->have_posts() ):
                 $new_featured->the_post();
-                get_template_part( "template-parts/news" );
+                
+
+            ?>
+            <div class="col-12 col-lg-4">
+                <div class="card h-100">
+                  <div class="card-img">
+                      <a href="<?php the_permalink(); ?>">
+                      <?php the_post_thumbnail(); ?>
+                      </a>
+                  </div>
+
+                  <div class="card-body">
+                      <a href="<?php the_permalink(); ?>">
+                      <h4 class="card-title"><?php the_title(); ?></h4>
+                      </a>
+                      <p class="card-text">
+                        <?php the_excerpt(); ?>
+                      </p>
+                      <a href="<?php the_permalink(); ?>">
+                          <small class="read-more">
+                          Read More →
+                          </small>
+                      </a>
+                  </div>
+                </div>
+            </div>
+            <?php
 
               endwhile;
               wp_reset_postdata();
@@ -104,8 +122,9 @@
 
           </div>
         </div>
-
-        <button class="btn btn-dark"><a href="#">Explore More</a></button>
+        <div>
+        <button class="btn btn-dark"><a href="">Explore More</a></button>
+        </div>
       </section>
     </main>
     <!-- ////////////////////////////////////////////////////////////// -->

@@ -20,14 +20,14 @@ function add_config(){
   );
  //  Custom header
   $args = array(
-    "height" => 500,
-    "width" => 1920
+    "height" => 200,
+    "width" => 200
   );
 
   add_theme_support("custom-header", $args);
   add_theme_support("post-thumbnails");
   add_theme_support("custom-logo", array(
-    "height" => 100,
+    "height" => 200,
     "width" => 200
   ));
 
@@ -41,9 +41,31 @@ function add_sidebars() {
   remove_theme_support( 'widgets-block-editor' );
   register_sidebar(
     array(
-      "name" => 'Home page news 1',
-      "id" => 'services-1',
-      "desription" => 'First News Area.',
+      "name" => 'Home page product 1',
+      "id" => 'home-page-product-1',
+      "desription" => 'Home page products area.',
+      "before_widget" => '<div class="product-img">',
+      "after_widget" => '</div>',
+      "before_title" => '<h4 class="card-title">',
+      "after_title" => '</h4>'
+    )
+  );
+  register_sidebar(
+    array(
+      "name" => 'Home page product 2',
+      "id" => 'home-page-product-2',
+      "desription" => 'Home page products area.',
+      "before_widget" => '<div class="product-img">',
+      "after_widget" => '</div>',
+      "before_title" => '<h4 class="card-title">',
+      "after_title" => '</h4>'
+    )
+  );
+  register_sidebar(
+    array(
+      "name" => 'About page vision img',
+      "id" => 'about-page-vision-img',
+      "desription" => 'About page vision',
       "before_widget" => '<div class="widget-wrapper">',
       "after_widget" => '</div>',
       "before_title" => '<h2 class="widget-title">',
@@ -52,26 +74,61 @@ function add_sidebars() {
   );
   register_sidebar(
     array(
-      "name" => 'Home page news 2',
-      "id" => 'services-2',
+      "name" => 'About page vision contents',
+      "id" => 'about-page-vision-contents',
+      "desription" => 'About page vision',
+      "before_widget" => '<div class="widget-wrapper">',
+      "after_widget" => '</div>',
+      "before_title" => '<h2 class="widget-title">',
+      "after_title" => '</h2>'
+    )
+  );
+  register_sidebar(
+    array(
+      "name" => 'About page mission img',
+      "id" => 'about-page-mission-img',
+      "desription" => 'About page mission',
+      "before_widget" => '<div class="widget-wrapper">',
+      "after_widget" => '</div>',
+      "before_title" => '<h2 class="widget-title">',
+      "after_title" => '</h2>'
+    )
+  );
+  register_sidebar(
+    array(
+      "name" => 'About page mission contents',
+      "id" => 'about-page-mission-contents',
+      "desription" => 'About page mission',
+      "before_widget" => '<div class="widget-wrapper">',
+      "after_widget" => '</div>',
+      "before_title" => '<h2 class="widget-title">',
+      "after_title" => '</h2>'
+    )
+  );
+  register_sidebar(
+    array(
+      "name" => 'About page cafe img',
+      "id" => 'about-page-cafe-img',
       "desription" => 'Second News Area.',
-      "before_widget" => '<div class="widget-wrapper">',
+      "before_widget" => '<div class="img-container">',
       "after_widget" => '</div>',
-      "before_title" => '<h2 class="widget-title">',
-      "after_title" => '</h2>'
+      // "before_title" => '<h1 class="cafe-title">',
+      // "after_title" => '</h1>'
+      
     )
   );
   register_sidebar(
     array(
-      "name" => 'Home page news 3',
-      "id" => 'services-3',
-      "desription" => 'Third News Area.',
-      "before_widget" => '<div class="widget-wrapper">',
+      "name" => 'About page cafe contents',
+      "id" => 'about-page-cafe-contents',
+      "desription" => 'Second News Area.',
+      "before_widget" => '<div class="card content">',
       "after_widget" => '</div>',
-      "before_title" => '<h2 class="widget-title">',
-      "after_title" => '</h2>'
+      
+      
     )
   );
+ 
 }
 
 // Excerpt Length
@@ -79,6 +136,13 @@ function set_excerpt_length() {
   return 20;
 }
 add_filter("excerpt_length", "set_excerpt_length");
+
+// Changing excerpt more
+// function new_excerpt_more($more) {
+//   global $post;
+//   return '… <a href="'. get_permalink($post->ID) . '">' . 'Read More &raquo;' . '</a>';
+//   }
+//   add_filter('excerpt_more', 'new_excerpt_more');
 
 
 
