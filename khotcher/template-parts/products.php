@@ -4,12 +4,12 @@
     <div class="card-product">
 
       <a href="<?php the_permalink(); ?>">
-      <?php the_post_thumbnail(); ?>
+      <?php the_post_thumbnail("thumbnail"); ?>
       </a>
      
       <div class="overlay">
       <a href="<?php the_permalink(); ?>">
-        <div class="text"><?php the_title(); ?></div>
+        <p class="text"><?php the_title(); ?></p>
       </a>
       </div>
     </div>

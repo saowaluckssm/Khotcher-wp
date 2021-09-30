@@ -3,7 +3,6 @@
         <?php
         echo do_shortcode('[smartslider3 slider="7"]');
         ?>
-
     </div>
 
     <!-- .................................................... -->
@@ -11,16 +10,16 @@
       <section class="contact-section">
         <div class="head-title">
           <div class="dark"></div>
-          <h2>Head Quarter</h2>
+          <h2><?php _e( "Head Quarter", "khotcher") ?></h2>
         </div>
 
         <div class="contact-container">
           <div class="row">
-            <div class="col-lg-5 col-12 content">
+            <div class="col-xl-5 col-12 content">
              <!-- Head-quarter snippet -->
             <?php dynamic_sidebar('smartslider_area_2'); ?>
             </div>
-            <div class="col-lg-7 col-12">
+            <div class="col-xl-7 col-12">
               <div class="row row-cols-1 row-cols-md-3">
                  <!-- Head quarter img gallery -->
                
@@ -58,12 +57,12 @@
       <section class="contact-section">
         <div class="head-title">
           <div class="light"></div>
-          <h2>Factory</h2>
+          <h2><?php _e( "Factory", "khotcher") ?></h2>
         </div>
 
         <div class="contact-container">
           <div class="row">
-            <div class="col-lg-7 col-12">
+            <div class="col-xl-7 col-12">
               <div class="row row-cols-1 row-cols-md-3">
                  <!-- Factory img gallery -->
                
@@ -95,7 +94,7 @@
                 </iframe>
               </div>
             </div>
-            <div class="col-lg-5 col-12 content">
+            <div class="col-xl-5 col-12 content">
             <?php dynamic_sidebar('smartslider_area_3'); ?>
             
             </div>
@@ -105,17 +104,17 @@
       <section class="contact-section">
         <div class="head-title">
           <div class="dark"></div>
-          <h2>Khotcher's cafe</h2>
+          <h2><?php _e( "Khotcher's cafe", "khotcher") ?></h2>
         </div>
 
         <div class="contact-container">
           <div class="row">
-            <div class="col-lg-5 col-12 content">
+            <div class="col-xl-5 col-12 content">
 
             <!-- Khotcher cafe snippet -->
               <?php dynamic_sidebar('smartslider_area_1'); ?>
             </div>
-            <div class="col-lg-7 col-12">
+            <div class="col-xl-7 col-12">
               <div class="row row-cols-1 row-cols-md-3">
 
               <!-- Cafe img gallery -->

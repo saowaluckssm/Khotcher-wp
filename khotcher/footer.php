@@ -1,19 +1,19 @@
 <footer>
       <div class="row">
-        <div class="col-12 col-lg-4 pd-1">
-          <h1>Contact us</h1>
+        <div class="col-12 col-xl-4 pd-1">
+          <h1><?php _e( "Contact us", "khotcher") ?></h1>
           <p>
-            99/859 Moo 2, Na Mai Sub-districy,
+            <?php _e( "99/859 Moo 2, Na Mai Sub-districy,", "khotcher") ?>
             <br />
-            Lad Lhum Kaeo District,
+            <?php _e( "Lad Lhum Kaeo District,", "khotcher") ?>
             <br />
-            Pathum Thani Provine,
+            <?php _e( "Pathum Thani Provine,", "khotcher") ?>
             <br />
-            Thailand 12140
+            <?php _e( "Thailand 12140", "khotcher") ?>
           </p>
-          <p>Tel:(66)2-023-7989</p>
-          <p>Mobile: (66)65-191-4654</p>
-          <p>Email: weerachoke_timmy@knotccherglobalfood.com</p>
+          <p><?php _e( "Tel:(66)2-023-7989", "khotcher") ?></p>
+          <p><?php _e( "Mobile: (66)65-191-4654", "khotcher") ?></p>
+          <p><?php _e( "Email: weerachoke_timmy@knotccherglobalfood.com", "khotcher") ?></p>
         </div>
         <div class="col-12 col-lg-4 pd-1 footer-menu">
             <?php wp_nav_menu( array( 
@@ -26,16 +26,16 @@
           <div class="footer-logo">
             <?php the_custom_logo(); ?>
           </div>
-          <div>
+          <div class="group">
             <div class="social-media">
-              <p>Follow us</p>
+              <p><?php _e( "Follow us", "khotcher") ?></p>
               <div class="line"></div>
               <a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
               <a href="#"><i class="fab fa-line"></i></a>
               <a href="#"><i class="fab fa-facebook-square"></i></a>
               <a href="#"><i class="fab fa-instagram"></i></a>
             </div>
-            <small>&copy; By Khotcher Global Food Co.Ltd.</small>
+            <small><?php _e( "&copy; By Khotcher Global Food Co.Ltd.", "khotcher") ?></small>
           </div>
         </div>
       </div>

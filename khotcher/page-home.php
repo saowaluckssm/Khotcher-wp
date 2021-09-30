@@ -1,14 +1,16 @@
 <?php get_header(); ?>
+
       <div class="hero">
         <?php
             echo do_shortcode('[smartslider3 slider="3"]');
             ?>
 
       </div> 
+     
 
     <!-- .................................................... -->
     <main>
-      <!-- about -->
+      <!-- about section-->
       <section class="main-about">
 
 
@@ -22,32 +24,29 @@
       <section class="main-product">
         <div class="head-title">
           <div class="dark"></div>
-          <h2>Products</h2>
+          <h2><?php _e( "Products", "khotcher") ?></h2>
         </div>
         <div class="container">
           <div class="row">
             <div class="col-sm-6">
               <div class="product-left">
                
-                <!-- <!-- <h4 class="card-title">Raw Material</h4> -->
-                <!-- <div class="product-img"> -->
+                
                 <?php
                 if( is_active_sidebar("home-page-product-1")){
                   dynamic_sidebar("home-page-product-1");
                 }
 
                 ?>
-                 
-                <!-- </div> -->
+              
                 <button class="btn btn-dark">
-                  <a href="#">Explore More</a>
+                  <a href="http://www.khotcherglobalfood.com/category/products/raw-materials/"><?php _e( "Explore More", "khotcher") ?></a>
                 </button>
               </div>
             </div>
             <div class="col-sm-6">
               <div class="product-right">
-                <!-- <h4 class="card-title">Finished Food</h4> -->
-                <!-- <div class="product-img"> -->
+               
                 <?php
                 if( is_active_sidebar("home-page-product-2")){
                   dynamic_sidebar("home-page-product-2");
@@ -55,9 +54,9 @@
 
                 ?>
                   
-                <!-- </div> -->
+                
                 <button class="btn btn-dark">
-                  <a href="">Explore More</a>
+                  <a href="http://www.khotcherglobalfood.com/category/products/finished-goods/"><?php _e( "Explore More", "khotcher") ?></a>
                 </button>
               </div>
             </div>
@@ -70,7 +69,7 @@
       <section class="main-latestnews">
         <div class="head-title">
           <div class="light"></div>
-          <h2>Latest news</h2>
+          <h2><?php _e( "Latest news", "khotcher") ?></h2>
         </div>
 
         <div class="container">
@@ -107,7 +106,7 @@
                       </p>
                       <a href="<?php the_permalink(); ?>">
                           <small class="read-more">
-                          Read More →
+                          <?php _e( "Read More", "khotcher") ?><span>→</span>
                           </small>
                       </a>
                   </div>
@@ -123,7 +122,7 @@
           </div>
         </div>
         <div>
-        <button class="btn btn-dark"><a href="">Explore More</a></button>
+        <button class="btn btn-dark"><a href="http://www.khotcherglobalfood.com/news/"><?php _e( "Explore More", "khotcher") ?></a></button>
         </div>
       </section>
     </main>

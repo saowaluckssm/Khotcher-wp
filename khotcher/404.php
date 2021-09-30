@@ -8,8 +8,8 @@
       
           <div class="row">
             <div class="error-404">
-              <h1>Page not found</h1>
-              <p>Unfortunately, the page you tried to reach does not exist on this site!</p>
+              <h1><?php _e( "Page not found", "khotcher"); ?></h1>
+              <p><?php _e("Unfortunately, the page you tried to reach does not exist on this site!", "khotcher"); ?></p>
             </div>
           </div>
         

@@ -18,12 +18,18 @@
                 </div>
               
                 <div class="card mb-3">
-                    <?php the_post_thumbnail(); ?>
+                  <div class="single-news-img">
+                    <?php the_post_thumbnail("large"); ?>
+                    </div>
                   <div class="card-body">
+                    
                     
                     <p class="card-text">
                           <?php the_content(); ?>
                     </p>
+                    <p><?php _e( "Categories:  ", "khotcher") ?><small> <?php the_category(", "); ?></small></p>
+                   
+                    
                     
                   </div>
                 </div>
@@ -39,11 +45,11 @@
         <section class="main-latestnews">
         <div class="head-title">
           <div class="light"></div>
-          <h2>Other News</h2>
+          <h2><?php _e( "Other News", "khotcher") ?></h2>
         </div>
 
         <div class="container">
-          <div class="row row-cols-1 row-cols-md-3 row-cols-sm-1">
+          <div class="row row-cols-1 row-cols-lg-3 row-cols-sm-1">
             <?php 
             $args = array(
               "post_type" => "post",
@@ -57,7 +63,31 @@
             if( $new_featured->have_posts() ):
               while( $new_featured->have_posts() ):
                 $new_featured->the_post();
-                get_template_part( "template-parts/news" );
+            ?>
+            <div class="col-12 col-lg-4">
+                <div class="card h-100">
+                  <div class="card-img">
+                      <a href="<?php the_permalink(); ?>">
+                      <?php the_post_thumbnail(); ?>
+                      </a>
+                  </div>
+
+                  <div class="card-body">
+                      <a href="<?php the_permalink(); ?>">
+                      <h4 class="card-title"><?php the_title(); ?></h4>
+                      </a>
+                      <p class="card-text">
+                        <?php the_excerpt(); ?>
+                      </p>
+                      <a href="<?php the_permalink(); ?>">
+                          <small class="read-more">
+                          <?php _e( "Read More →", "khotcher") ?>
+                          </small>
+                      </a>
+                  </div>
+                </div>
+            </div>
+            <?php
 
               endwhile;
               wp_reset_postdata();
@@ -67,7 +97,7 @@
           </div>
         </div>
 
-        <button class="btn btn-dark"><a href="#">Explore More</a></button>
+        <button class="btn btn-dark"><a href="#"><?php _e( "Explore More", "khotcher") ?></a></button>
       </section>
       
        

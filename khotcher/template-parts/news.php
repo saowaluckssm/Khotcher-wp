@@ -15,7 +15,7 @@
         </p>
           <a href="<?php the_permalink(); ?>">
               <small class="read-more">
-              Read More →
+              <?php _e( "Read More ", "khotcher") ?><span>→</span>
               </small>
           </a>
       </div>

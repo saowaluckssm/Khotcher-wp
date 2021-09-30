@@ -6,20 +6,17 @@
 
     </div>
 
-
-
-    <!-- .................................................... -->
     <main>
       <div class="news">
         <div class="filter">
           <ul>
-            <li><a href="#">Latest</a></li>
+            <li class="current"><a href="http://www.khotcherglobalfood.com/news/"><?php _e( "Latest", "khotcher") ?></a></li>
             <div class="line"></div>
-            <li><a href="#">Article</a></li>
+            <li><a href="http://www.khotcherglobalfood.com/category/news/article/"><?php _e( "Article", "khotcher") ?></a></li>
             <div class="line"></div>
-            <li><a href="#">csr</a></li>
+            <li><a href="http://www.khotcherglobalfood.com/category/news/csr/"><?php _e( "csr", "khotcher") ?></a></li>
             <div class="line"></div>
-            <li><a href="#">News&Events</a></li>
+            <li><a href="http://www.khotcherglobalfood.com/category/news/new-events/"><?php _e( "News&Events", "khotcher") ?></a></li>
           </ul>
         </div>
 
@@ -56,12 +53,12 @@
              wp_reset_postdata();
             else:       
             ?>
-            <p>There's nothing yet to be displayed</p>
+            <p><?php _e( "There's nothing yet to be displayed", "khotcher") ?></p>
             <?php endif; ?>
           </div>
 
         </div>
       </div>
     </main>
-    <!-- ////////////////////////////////////////////////////////////// -->
+  
 <?php get_footer(); 

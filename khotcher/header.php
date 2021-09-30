@@ -61,12 +61,20 @@
 
       <div class="collapse" id="navbarToggleExternalContent">
           <div class="bg-dark p-4">
-            <h5 class="text-white h4">Khotcher Global food</h5>
+            <h2 class="text-white"><?php _e( "Khotcher Global food", "khotcher") ?></h2>
             <?php wp_nav_menu( array( 
           'theme_location' => 'main_menu',
           
           
           ) ); ?>
+            <div class="social-media">
+              <p><?php _e("Follow us", "khotcher" )?></p>
+              <div class="line"></div>
+              <a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
+              <a href="#"><i class="fab fa-line"></i></a>
+              <a href="#"><i class="fab fa-facebook-square"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
           </div>
       </div>
 

@@ -1,42 +1,33 @@
 <?php get_header(); ?>
+
+<!-- ////////////////////////////////////////// -->
 <div class="hero">
-    <?php
+    <!-- <?php
     echo do_shortcode('[smartslider3 slider="5"]');
-    ?>
+    ?> -->
 
 </div>
 
-
-
-    <!-- .................................................... -->
-    <main>
-      <div class="products">
+<main class="category-page">
+  <div class="products">
+       
         <div class="filter">
-        
-        
-          <ul>
-            <li><a href="https://localhost/khotcher/category/finished-goods/"><?php _e( "FINISHTED GOODS", "khotcher") ?></a></li>
-            <div class="line"></div>
-            <li><a href="https://localhost/khotcher/category/raw-materials/"><?php _e( "RAW MATERIALS", "khotcher") ?></a></li>
-          </ul>
-        </div>
-        
-        <div class="container">
+        <ul>
+            
+            <li>
+              <a>
+              <?php
+              single_term_title();
+              ?>
+              </a>
+            </li>
+        </ul>
+      </div>
+      <div class="container">
           <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
             <?php
-
-                $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-
-                $args = array(
-                    'post_type' => 'products',
-                    'paged' => $paged
-                );
-
-                $wp_query = new WP_Query($args);
-
-                if($wp_query->have_posts() ):
-                    while($wp_query->have_posts() ): 
-                        $wp_query->the_post();
+                if(have_posts() ):
+                    while(have_posts() ): the_post();
                 get_template_part( "template-parts/products" );
             endwhile;
 
@@ -65,10 +56,9 @@
             <p><?php _e( "We select the best for you", "khotcher") ?></p>
             <div></div>
           </div>
-        </div>
       </div>
-    </main>
-   
-    
-    <!-- ////////////////////////////////////////////////////////////// -->
+  </div>
+</main>
+
+
 <?php get_footer(); 

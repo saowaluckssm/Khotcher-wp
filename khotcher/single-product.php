@@ -1,7 +1,9 @@
-/*
+<!-- /*
 Template Name: Product Template 
-Template Post Type: post, product
-*/
+Template Post Type: products
+*/ -->
+
+
 
 
 <?php get_header(); ?>
@@ -13,33 +15,41 @@ Template Post Type: post, product
     ?> -->
 
 </div>
-<main class="single-product">
-    <section class="single-product-left">
+<main class="single-product-page">
+    <section class="single-product">
 
           <div class="row">
-                <div class="col-md-6 col-12 content">
-              
+                <div class="single-product-img col-lg-6 col-12">
+                    <?php the_post_thumbnail("medium"); ?>
+                </div>
+                <div class="col-lg-6 col-12 content">
+                    
+                    <div class="content-section">
                     <?php  
                         while( have_posts() ): the_post();
                         ?>
                     <h1><?php the_title(); ?></h1>
+                    <p><?php _e( "Posted in : ", "khotcher") ?><?php echo get_the_date(); ?></p>
+                    <small><?php _e( "Categories: ", "khotcher") ?><?php the_category(", "); ?></small>
+                    <br>
+                    <small><?php the_tags("Tags: ", ","); ?></small>
+
                     <p class="card-text">
                         <?php the_content(); ?>
                     </p>
-              
-                    <div class="end-line dark"></div>
-
-                    <div>
-                        <button class="btn btn-dark">
-                        <a href="#">Explore More</a>
-                        </button>
                     </div>
+              
                     
+                    <!-- <div class="button">
+                        <button class="btn btn-dark">
+                            <a href="#">Shop now</a>
+                        </button>
+                    </div> -->
                     
                 </div>
-                <div class="single-product-img col-md-6 col-12">
-                    <?php the_post_thumbnail(); ?>
-                </div>
+                    
+                
+                
 
                 <?php
                 endwhile;
@@ -48,48 +58,19 @@ Template Post Type: post, product
                        
       
     </section>
-    <section class="single-product-right">
-    <div class="row">
-                        <?php  
-                        while( have_posts() ): the_post();
-                        ?>
-
-                <div class="single-product-img col-md-6 col-12">
-                    <?php the_post_thumbnail(); ?>
-                </div>
-
-                <div class="col-md-6 col-12 content">
-              
-                    
-                    <h1><?php the_title(); ?></h1>
-                    <p class="card-text">
-                        <?php the_content(); ?>
-                    </p>
-              
-                    <div class="end-line dark"></div>
-
-                    <div>
-                        <button class="btn btn-dark">
-                        <a href="#">Explore More</a>
-                        </button>
-                    </div>
-                </div>
-              
-
-                <?php
-                endwhile;
-                ?>
-            </div> 
-    
-    </section>
-
-    <section>
+    <div class="market">
         <div class="head-title">
             <div class="dark"></div>
             <h2>Available at</h2>
         </div>
-        <div class="thumbnail"></div>
-    </section>
+        <div class="market-logo-thumbnail">
+        <?php dynamic_sidebar('smartslider_area_4'); ?>
+        </div>
+    </div>
+    
+
+   
+
 </main>
 
 

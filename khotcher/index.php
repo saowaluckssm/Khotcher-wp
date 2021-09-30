@@ -1,41 +1,43 @@
 <?php get_header(); ?>
 
-  
+<!-- ////////////////////////////////////////// -->
+<div class="hero">
+    <!-- <?php
+    echo do_shortcode('[smartslider3 slider="5"]');
+    ?> -->
 
-    <!-- .................................................... -->
-    <main>
-      <div class="container">
-      
-          <div class="row row-cols-1 row-cols-md-3">
-            <div class="col">
-              <div class="card">
-                <?php 
+</div>
+<main class="single-product-page">
+    <?php  
+    while( have_posts() ): the_post();
+    ?>
+    <section class="single-product">
+          <div class="row">
+                <div class="col-md-6 col-12 content">
+                    <h1><?php the_title(); ?></h1>
+                    <p><?php _e( "Posted in : ", "khotcher") ?><?php echo get_the_date(); ?></p>
+                    <small><?php _e( "Categories: ", "khotcher") ?><?php the_category(", "); ?></small>
 
-                if( have_posts() ):
-                  while( have_posts() ): the_post();
-                ?>
-
-                <div class="card-body">
-                  <h4 class="card-title"><?php the_title(); ?></h4>
-                  <p class="card-text">
-                    <?php the_content(); ?>
-                  </p>
+                    <p class="card-text">
+                        <?php the_content(); ?>
+                    </p>
+                    
+                </div>
+                <div class="single-product-img col-md-6 col-12">
+                    <?php the_post_thumbnail(); ?>
                 </div>
 
-                <?php
-                endwhile;
-                else:
-                ?>
-                <p>There's nothing yet to be displayed!</p>
+                
+            </div>                         
+    </section>
+    <?php
+    endwhile;
+    ?>
+    
 
-                <?php endif; ?>
-              </div>
-            </div>
-            
-            
-          </div>
-        
-      </div>
-    </main>
-    <!-- ////////////////////////////////////////////////////////////// -->
+    
+
+</main>
+
+
 <?php get_footer(); 

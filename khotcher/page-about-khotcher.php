@@ -59,14 +59,12 @@
       <div class="about-cafe-container">
       
         <div class="head-cafe">
-          <h4 class="left">Specialty Coffee</h4>
-          <h4 class="right">Homemade Bakery</h4>
+          <h4 class="left"><?php _e( "Specialty Coffee", "khotcher") ?></h4>
+          <h4 class="right"><?php _e( "Homemade Bakery", "khotcher") ?></h4>
 
          
         
-          <!-- <?php
-          echo do_shortcode('[smartslider3 slider="13"]');
-          ?> -->
+         
             <div class="about-cafe-img">
               <?php
                 if( is_active_sidebar("about-page-cafe-img")){
@@ -93,7 +91,9 @@
      
       </div>
       <section>
-        <div class="thumbnail"></div>
+        <div class="thumbnail">
+        <?php dynamic_sidebar('smartslider_area_5'); ?>
+        </div>
       </section>
     </main>
     <!-- ////////////////////////////////////////////////////////////// -->

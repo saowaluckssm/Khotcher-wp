@@ -1,7 +1,7 @@
 <?php 
 
 function load_scripts(){
-  wp_enqueue_style('template', get_template_directory_uri() . '/css/template.css', array(), "1.0", "all");
+  wp_enqueue_style('template', get_template_directory_uri() . '/css-tem/template.css', array(), "1.0", "all");
 }
 
 add_action('wp_enqueue_scripts', 'load_scripts');
@@ -12,10 +12,10 @@ function add_config(){
   // Registering menus
   register_nav_menus(
     array(
-      "main_menu" => "Main Menu",
-      "left_menu" => "Left Menu",
-      "right_menu" => "Right Menu",
-      "footer_menu" => "Footer Menu"
+      "main_menu" => __("Main Menu", "khotcher"),
+      "left_menu" => __("Left Menu", "khotcher"),
+      "right_menu" => __("Right Menu", "khotcher"),
+      "footer_menu" => __("Footer Menu", "khotcher")
     )
   );
  //  Custom header
@@ -30,6 +30,9 @@ function add_config(){
     "height" => 200,
     "width" => 200
   ));
+
+  // $textdomain = "khotcher";
+  // load_theme_textdomain( $textdomain, get_template_directory() . "/languages/" );
 
 }
 add_action('after_setup_theme', 'add_config', 0);
@@ -156,3 +159,12 @@ function add_additional_class_on_li($classes, $item, $args) {
 add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
 
 
+
+function namespace_add_custom_types( $query ) {
+  if( (is_category() || is_tag()) && $query->is_archive() && empty( $query->query_vars['suppress_filters'] ) ) {
+    $query->set( 'post_type', array(
+     'post', 'products'
+        ));
+    }
+}
+add_action( 'pre_get_posts', 'namespace_add_custom_types' );
