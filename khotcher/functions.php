@@ -1,7 +1,7 @@
 <?php 
 
 function load_scripts(){
-  wp_enqueue_style('template', get_template_directory_uri() . '/css-tem/template.css', array(), "1.0", "all");
+  wp_enqueue_style('template', get_template_directory_uri() . '/css-template/template.css', array(), "1.0", "all");
 }
 
 add_action('wp_enqueue_scripts', 'load_scripts');
@@ -30,6 +30,7 @@ function add_config(){
     "height" => 200,
     "width" => 200
   ));
+
 
   // $textdomain = "khotcher";
   // load_theme_textdomain( $textdomain, get_template_directory() . "/languages/" );

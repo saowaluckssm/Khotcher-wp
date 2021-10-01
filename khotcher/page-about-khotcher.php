@@ -12,7 +12,7 @@
       <section class="about-section bg-light pd-2">
        
         <div class="row">
-          <div class="about-section-img col-md-6 col-12">
+          <div class="about-section-img col-lg-6 col-12">
             <?php
             if( is_active_sidebar("about-page-vision-img")){
               dynamic_sidebar("about-page-vision-img");
@@ -20,7 +20,7 @@
             ?>
           
           </div>
-          <div class="col-md-6 col-12 content">
+          <div class="col-lg-6 col-12 content">
             
               <?php
               if( is_active_sidebar("about-page-vision-contents")){
@@ -35,7 +35,7 @@
       </section>
       <section class="about-section bg-primary">
         <div class="row">
-            <div class="col-md-6 col-12 content">
+            <div class="col-lg-6 col-12 content">
               <?php
               if( is_active_sidebar("about-page-mission-contents")){
                 dynamic_sidebar("about-page-mission-contents");
@@ -45,7 +45,7 @@
           
             <div class="end-line dark"></div>
           </div>
-          <div class="about-section-img col-md-6 col-12">
+          <div class="about-section-img col-lg-6 col-12">
               <?php
               if( is_active_sidebar("about-page-mission-img")){
                 dynamic_sidebar("about-page-mission-img");
