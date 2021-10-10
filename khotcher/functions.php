@@ -1,6 +1,7 @@
 <?php 
 
 function load_scripts(){
+  wp_enqueue_script( 'js-file', get_template_directory_uri() . '/js/script.js', array ( 'jquery' ), 1.0, true);
   wp_enqueue_style('template', get_template_directory_uri() . '/css-template/template.css', array(), "1.0", "all");
 }
 
@@ -20,15 +21,15 @@ function add_config(){
   );
  //  Custom header
   $args = array(
-    "height" => 200,
-    "width" => 200
+    "height" => 400,
+    "width" => 1920
   );
 
   add_theme_support("custom-header", $args);
   add_theme_support("post-thumbnails");
   add_theme_support("custom-logo", array(
-    "height" => 200,
-    "width" => 200
+    "height" => 100,
+    "width" => 100
   ));
 
 
@@ -137,7 +138,7 @@ function add_sidebars() {
 
 // Excerpt Length
 function set_excerpt_length() {
-  return 20;
+  return 30;
 }
 add_filter("excerpt_length", "set_excerpt_length");
 

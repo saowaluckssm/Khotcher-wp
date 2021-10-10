@@ -2,10 +2,8 @@
 
 <!-- ////////////////////////////////////////// -->
     <div class="hero tag-hero">
-            <?php
-            echo do_shortcode('[smartslider3 slider="17"]');
-            ?>
-            <div class="tag-header">
+    <img src="<?php header_image(); ?> alt="tag-hero-picture" />
+    <div class="tag-header">
         <h1>
             <?php
             single_term_title();
@@ -40,7 +38,7 @@
                     <p><?php _e("Posted in : ", "khotcher")?><?php echo get_the_date(); ?></p>
                     <small><?php _e("Categories: ", "khotcher")?><?php the_category(", "); ?></small>
                     <br>
-                    <small><?php the_tags("Tags: ", ","); ?></small>
+                    <small><?php _e("Tags: ", "khotcher")?><?php the_tags("", ","); ?></small>
 
                     <p class="card-text">
                         <?php the_content(); ?>
@@ -48,11 +46,7 @@
                     </div>
               
                     
-                    <!-- <div class="button">
-                        <button class="btn btn-dark">
-                            <a href="#">Shop now</a>
-                        </button>
-                    </div> -->
+                    
                     
                 </div>
                     

@@ -1,16 +1,22 @@
 
-<div class="col-6 col-md-6 col-lg-4">
-  <div class="card h-100 card-product">
+<div class="col-6 col-md-6 col-lg-4 box">
+  <div class="card h-100">
     <div class="card-product">
 
-      <a href="<?php the_permalink(); ?>">
+      <!-- <a href="<?php the_permalink(); ?>"> -->
       <?php the_post_thumbnail("thumbnail"); ?>
-      </a>
+      <!-- </a> -->
      
       <div class="overlay">
-      <a href="<?php the_permalink(); ?>">
-        <p class="text"><?php the_title(); ?></p>
-      </a>
+        
+        
+        <p class="text"> 
+          <a href="<?php the_permalink(); ?>">
+            <?php the_tags(""); ?>
+          </a>
+       
+        </p>
+    
       </div>
     </div>
   </div>

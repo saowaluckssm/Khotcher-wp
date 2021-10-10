@@ -15,9 +15,9 @@
         
         
           <ul>
-            <li><a href="https://localhost/khotcher/category/finished-goods/"><?php _e( "FINISHTED GOODS", "khotcher") ?></a></li>
+            <li><a href="http://www.khotcherglobalfood.com/category/finished-goods/"><?php _e( "FINISHED GOODS", "khotcher") ?></a></li>
             <div class="line"></div>
-            <li><a href="https://localhost/khotcher/category/raw-materials/"><?php _e( "RAW MATERIALS", "khotcher") ?></a></li>
+            <li><a href="http://www.khotcherglobalfood.com/category/raw-materials/"><?php _e( "RAW MATERIALS", "khotcher") ?></a></li>
           </ul>
         </div>
         

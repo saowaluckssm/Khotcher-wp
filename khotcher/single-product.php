@@ -10,9 +10,7 @@ Template Post Type: products
 
 <!-- ////////////////////////////////////////// -->
 <div class="hero">
-    <!-- <?php
-    echo do_shortcode('[smartslider3 slider="5"]');
-    ?> -->
+   
 
 </div>
 <main class="single-product-page">
@@ -40,11 +38,7 @@ Template Post Type: products
                     </div>
               
                     
-                    <!-- <div class="button">
-                        <button class="btn btn-dark">
-                            <a href="#">Shop now</a>
-                        </button>
-                    </div> -->
+                    
                     
                 </div>
                     

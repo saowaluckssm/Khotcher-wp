@@ -8,12 +8,12 @@
     <!-- .................................................... -->
     <main class="contact">
       <section class="contact-section">
-        <div class="head-title">
+        <div class="head-title box">
           <div class="dark"></div>
           <h2><?php _e( "Head Quarter", "khotcher") ?></h2>
         </div>
 
-        <div class="contact-container">
+        <div class="contact-container box">
           <div class="row">
             <div class="col-xl-5 col-12 content">
              <!-- Head-quarter snippet -->
@@ -34,7 +34,7 @@
                       while( $new_featured->have_posts() ):
                         $new_featured->the_post();
                   ?>
-                    <div class="col">
+                    <div class="col-sm-4">
                         <div class="card card-img">
                           <?php the_post_thumbnail(); ?>
                         </div>
@@ -55,12 +55,12 @@
         </div>
       </section>
       <section class="contact-section">
-        <div class="head-title">
+        <div class="head-title box">
           <div class="light"></div>
           <h2><?php _e( "Factory", "khotcher") ?></h2>
         </div>
 
-        <div class="contact-container">
+        <div class="contact-container box">
           <div class="row">
             <div class="col-xl-7 col-12">
               <div class="row row-cols-1 row-cols-md-3">
@@ -77,7 +77,7 @@
                       while( $new_featured->have_posts() ):
                         $new_featured->the_post();
                   ?>
-                    <div class="col">
+                    <div class="col-sm-4">
                         <div class="card card-img">
                           <?php the_post_thumbnail(); ?>
                         </div>
@@ -102,12 +102,12 @@
         </div>
       </section>
       <section class="contact-section">
-        <div class="head-title">
+        <div class="head-title box">
           <div class="dark"></div>
           <h2><?php _e( "Khotcher's cafe", "khotcher") ?></h2>
         </div>
 
-        <div class="contact-container">
+        <div class="contact-container box">
           <div class="row">
             <div class="col-xl-5 col-12 content">
 
@@ -130,7 +130,7 @@
                       while( $new_featured->have_posts() ):
                         $new_featured->the_post();
                 ?>
-                 <div class="col">
+                 <div class="col-sm-4">
                     <div class="card card-img">
                       <?php the_post_thumbnail(); ?>
                     </div>

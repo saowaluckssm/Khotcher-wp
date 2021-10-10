@@ -6,6 +6,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
   <link rel="stylesheet" type="text/css" href="./Fonts/MyFontsWebfontsKit.css">
   <link
       rel="stylesheet"
@@ -23,7 +24,7 @@
   <?php wp_head(); ?>
   <title>Khother</title>
 </head>
-<body>
+<body <?php body_class(); ?>>
 <header class="main-nav">
       <nav class="row">
       
@@ -71,9 +72,9 @@
               <p><?php _e("Follow us", "khotcher" )?></p>
               <div class="line"></div>
               <a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
-              <a href="#"><i class="fab fa-line"></i></a>
-              <a href="#"><i class="fab fa-facebook-square"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="https://lin.ee/ARwbigd"><i class="fab fa-line"></i></a>
+              <a href="https://www.facebook.com/Khotcherglobalfood"><i class="fab fa-facebook-square"></i></a>
+              <a href="https://www.instagram.com/khotcher.store/"><i class="fab fa-instagram"></i></a>
             </div>
           </div>
       </div>

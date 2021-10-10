@@ -9,7 +9,7 @@
 
     <!-- .................................................... -->
     <main class="about">
-      <section class="about-section bg-light pd-2">
+      <section class="about-section bg-primary box">
        
         <div class="row">
           <div class="about-section-img col-lg-6 col-12">
@@ -28,12 +28,12 @@
               }
               ?>
             
-            <div class="end-line dark"></div>
+            <div class="end-line light"></div>
           </div>
         </div>
         
       </section>
-      <section class="about-section bg-primary">
+      <section class="about-section bg-primary box">
         <div class="row">
             <div class="col-lg-6 col-12 content">
               <?php
@@ -43,7 +43,7 @@
               ?>
             
           
-            <div class="end-line dark"></div>
+            <div class="end-line light"></div>
           </div>
           <div class="about-section-img col-lg-6 col-12">
               <?php
@@ -56,7 +56,7 @@
         </div>
       </section>
      
-      <div class="about-cafe-container">
+      <div class="about-cafe-container box">
       
         <div class="head-cafe">
           <h4 class="left"><?php _e( "Specialty Coffee", "khotcher") ?></h4>
@@ -90,7 +90,7 @@
        
      
       </div>
-      <section>
+      <section class="box">
         <div class="thumbnail">
         <?php dynamic_sidebar('smartslider_area_5'); ?>
         </div>

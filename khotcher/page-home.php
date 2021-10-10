@@ -11,7 +11,7 @@
     <!-- .................................................... -->
     <main>
       <!-- about section-->
-      <section class="main-about">
+      <section class="main-about box">
 
 
           <?php
@@ -21,14 +21,14 @@
       </section>
       <!-- ---------------------------Product ------------------------------------>
 
-      <section class="main-product">
+      <section class="main-product box">
         <div class="head-title">
           <div class="dark"></div>
           <h2><?php _e( "Products", "khotcher") ?></h2>
         </div>
         <div class="container">
           <div class="row">
-            <div class="col-sm-6">
+            <div class="col-12 col-lg-6">
               <div class="product-left">
                
                 
@@ -44,7 +44,7 @@
                 </button>
               </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-12 col-lg-6">
               <div class="product-right">
                
                 <?php
@@ -66,7 +66,7 @@
 
       <!-- ************************Latestnews************************** -->
 
-      <section class="main-latestnews">
+      <section class="main-latestnews box">
         <div class="head-title">
           <div class="light"></div>
           <h2><?php _e( "Latest news", "khotcher") ?></h2>
@@ -93,7 +93,7 @@
                 <div class="card h-100">
                   <div class="card-img">
                       <a href="<?php the_permalink(); ?>">
-                      <?php the_post_thumbnail(); ?>
+                      <?php the_post_thumbnail("thumbnail"); ?>
                       </a>
                   </div>
 

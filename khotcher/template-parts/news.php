@@ -1,4 +1,4 @@
-<div class="col-12 col-md-6 col-lg-4">
+<div class="col-12 col-md-6 col-lg-4 box">
      <div class="card h-100">
       <div class="card-img">
           <a href="<?php the_permalink(); ?>">
