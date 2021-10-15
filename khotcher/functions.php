@@ -170,3 +170,9 @@ function namespace_add_custom_types( $query ) {
     }
 }
 add_action( 'pre_get_posts', 'namespace_add_custom_types' );
+
+function add_font_style() {
+  wp_enqueue_style('font-style', get_stylesheet_directory_uri() . '/Fonts/MyFontsWebfontsKit.css');
+}
+
+add_action( 'wp_enqueue_scripts', 'add_font_style' );
