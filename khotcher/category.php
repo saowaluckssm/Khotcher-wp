@@ -1,10 +1,14 @@
 <?php get_header(); ?>
 
 <!-- ////////////////////////////////////////// -->
-<div class="hero">
-    <!-- <?php
-    echo do_shortcode('[smartslider3 slider="5"]');
-    ?> -->
+<div class="hero tag-hero">
+  <div class="tag-header">
+          <h1>
+              <?php
+              single_term_title();
+              ?>
+          </h1>
+  </div>
 
 </div>
 
@@ -51,12 +55,13 @@
             
           </div>
 
+          
+      </div>
           <div class="ending-text">
             <div></div>
             <p><?php _e( "We select the best for you", "khotcher") ?></p>
             <div></div>
           </div>
-      </div>
   </div>
 </main>
 

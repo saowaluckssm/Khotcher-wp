@@ -45,6 +45,9 @@
              
               ?>
 
+
+              
+
             <div class="col page-button">  
               <?php posts_nav_link(); ?>             
             </div>

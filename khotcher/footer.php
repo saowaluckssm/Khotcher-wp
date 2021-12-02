@@ -16,7 +16,7 @@
           <br />
           <?php _e( "Mobile: (+66)65-191-4654", "khotcher") ?>
           <br />
-          <?php _e( "Email: weerachoke_timmy@knotcherglobalfood.com", "khotcher") ?>
+          <?php _e( "Email: weerachoke_timmy@khotcherglobalfood.com", "khotcher") ?>
          </p>
         </div>
         <div class="col-12 col-lg-4 pd-1 footer-menu">

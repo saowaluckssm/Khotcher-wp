@@ -15,9 +15,11 @@
         
         
           <ul>
-            <li><a href="http://www.khotcherglobalfood.com/category/finished-goods/"><?php _e( "FINISHED GOODS", "khotcher") ?></a></li>
+            <li class="current"><a href="https://khotcherglobalfood.com/our-products/"><?php _e( "ALL PRODUCTS", "khotcher") ?></a></li>
             <div class="line"></div>
-            <li><a href="http://www.khotcherglobalfood.com/category/raw-materials/"><?php _e( "RAW MATERIALS", "khotcher") ?></a></li>
+            <li><a href="https://www.khotcherglobalfood.com/category/finished-goods/"><?php _e( "FINISHED GOODS", "khotcher") ?></a></li>
+            <div class="line"></div>
+            <li><a href="https://www.khotcherglobalfood.com/category/raw-materials/"><?php _e( "RAW MATERIALS", "khotcher") ?></a></li>
           </ul>
         </div>
         
@@ -42,6 +44,10 @@
 
             ?>
 
+
+
+              
+
                 <div class="col-6 page-button">  
                   <?php the_posts_pagination(
                     array(
@@ -60,12 +66,13 @@
             
           </div>
 
-          <div class="ending-text">
+          
+        </div>
+        <div class="ending-text">
             <div></div>
             <p><?php _e( "We select the best for you", "khotcher") ?></p>
             <div></div>
           </div>
-        </div>
       </div>
     </main>
    

@@ -2,7 +2,7 @@
 
 <!-- ////////////////////////////////////////// -->
     <div class="hero tag-hero">
-    <img src="<?php header_image(); ?> alt="tag-hero-picture" />
+    <!-- <img src="<?php header_image(); ?> alt="tag-hero-picture" /> -->
     <div class="tag-header">
         <h1>
             <?php

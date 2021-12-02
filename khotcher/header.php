@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-  <!-- <link rel="stylesheet" type="text/css" href="./Fonts/MyFontsWebfontsKit.css"> -->
+  
   <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -22,7 +22,7 @@
       crossorigin="anonymous"
     />
   <?php wp_head(); ?>
-  <title>Khother</title>
+  <title>Khotcher Global Food</title>
 </head>
 <body <?php body_class(); ?>>
 <header class="main-nav">
