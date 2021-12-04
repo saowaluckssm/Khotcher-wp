@@ -27,10 +27,17 @@
           <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
             <?php
 
+                $tag_ids = array();
+                foreach( get_the_tags($post->ID) as $tag ) {
+                  $tag_ids[] = $tag->term_id;
+                }
+
                 $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 
                 $args = array(
                     'post_type' => 'products',
+                    'tag__in' => $tag_ids,
+                    'posts_per_page' => 1,
                     'paged' => $paged
                 );
 
